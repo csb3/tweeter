@@ -26,6 +26,9 @@ body {
 
 main {
   width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
