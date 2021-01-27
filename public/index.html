@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
+    <defs>
+      <filter id="filter">
+        <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.1" flood-color="#4056A1" />
+      </filter>
+    </defs>
+  </svg>
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
@@ -14,6 +21,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -32,7 +40,7 @@
         <span>&#8681;</span>
       </div>
     </nav>
-    <header>
+    <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -53,6 +61,8 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweets">
       </section>
     </main>
   </body>
