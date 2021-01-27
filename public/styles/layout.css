@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  background-color: #4056A1;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -30,6 +31,3 @@ main {
   flex-flow: column;
   align-items: center;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
