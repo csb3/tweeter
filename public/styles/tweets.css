@@ -7,9 +7,10 @@ section.tweets {
 div.tweets {
   width: 100%;
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   border: solid 3px;
   margin-bottom: 1em;
+  max-width: 100%;
 }
 div.tweets:hover {
   box-shadow: 3px 3px #536a8b;
@@ -18,6 +19,7 @@ div.tweets:hover {
 .handle {
   display: none;
 }
+
 div.tweets:hover .handle {
   display:block;
   color: #b4b8c5;
@@ -33,6 +35,7 @@ div.tweets:hover .icon {
 
 a.tweets{
   padding: 10px;
+  max-width: inherit;
 }
 .tweets header{
   display: flex;
@@ -45,6 +48,8 @@ a.tweets{
 p.tweets {
   font-weight: bold;
   margin: 1em;
+  width: inherit;
+  word-break: break-word;
 }
 footer.tweets {
   border-top: 3px solid;

@@ -18,14 +18,18 @@ $(document).ready(function() {
 
  const renderTweets = function(tweets) {
    for (const entry of tweets) {
-     console.log(entry);
      const $tweet = createTweetElement(entry)
      $('section.tweets').append($tweet); 
    }
  }
+ const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
  const createTweetElement = function(tweetObject) {
    const avatar = tweetObject.user.avatars;
-   const text = tweetObject.content.text;
+   const text = escape(tweetObject.content.text);
    const handle = tweetObject.user.handle;
    const name = tweetObject.user.name;
    const date = new Date(tweetObject.created_at).toISOString();
@@ -36,7 +40,8 @@ $(document).ready(function() {
    <div class="user"><img class="tweets avatar" src= ${avatar}>${name}</div>
    <p class="handle">${handle}</p>
    </header>
-   <p class="tweets">${text}</p>
+   <body>
+   <p class="tweets">${text}</p></body>
    <footer class="tweets">
    <p><time class="timeago" datetime="${date}">${date}</time></p><div><img class="icon" src="images/flag.svg"><img class="icon" src="images/repeat.svg"><img class="icon" src="images/heart.svg"></div>
    </footer>
@@ -46,15 +51,26 @@ $(document).ready(function() {
  }
   
   $('#tweet-form').on("submit", function(event) {
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: '#tweet-form'.serialize(),
-      success: function (data) {
-        console.log(data);
-      }
+    event.preventDefault();
+    console.log($('#tweet-text').val().length);
+    if($('#tweet-text').val().length === 0 || $('#tweet-text').val() === null) {
+      $('a.error').html("! Tweet cannot be blank");
+      $('.error').css("display", "inline");
+    } else if ($('#tweet-text').val().length > 140) {
+      $('a.error').html("! Tweet cannot exceed 140 characters");
+      $('.error').css("display", "inline");
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: '/tweets',
+        data: $('#tweet-text').serialize(),
+      }).then(() => {
+        loadTweets()
+        $('#tweet-text').val('')
+        $('.error').css("display", "none");
+        $('a.error').html("");
+        $(".counter").html(140);
+      })
+    }
   });
-  event.preventDefault();
-});
-
 });
