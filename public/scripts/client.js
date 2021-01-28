@@ -69,6 +69,7 @@ $(document).ready(function() {
         url: '/tweets',
         data: $('#tweet-text').serialize(),
       }).then(() => {
+        $('section.tweets').empty();
         loadTweets()
         $('#tweet-text').val('')
         $("a.error").slideUp( "fast", function() {

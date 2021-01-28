@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0">
     <defs>
       <filter id="filter">
@@ -35,16 +36,16 @@
   </head>
 
   <body>
-    <div id="spacer"></div>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav id="nav">
       <span>tweeter</span>
       <div>
         <a><strong>Write</strong> a new tweet</a>
         <a href="#tweet-text" id="arrow" class="fas fa-angle-double-down"></a>
       </div>
     </nav>
-    <header class="header">
+    <div id="spacer"></div>
+    <header class="header" id="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>

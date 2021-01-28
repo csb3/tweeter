@@ -1,7 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: lightskyblue;
+  background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
   color: #FFFFFF;
   padding: 1.5em;
   display: flex; 
@@ -20,4 +21,11 @@ nav div {
 #arrow {
   color: red;
   text-decoration:none;
+}
+@media only screen and (min-width: 1024px) {
+  nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  background-image:none;
+  }
 }

@@ -32,10 +32,27 @@ main {
   align-items: center;
 }
 
-#spacer {
-  height: 120px;
-}
-
 label {
   font-weight: bold;
+}
+#spacer {
+  height:120px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
+
+  #spacer {
+    align-self: top;
+    height: 160px;
+    width: 100%;
+  }
+  .container {
+    width: 50%;
+  }
+
 }

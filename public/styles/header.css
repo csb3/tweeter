@@ -8,3 +8,10 @@
   align-items: center;
   justify-content: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  #header {
+    margin: 50px;
+    width: 400px;
+  }
+}
