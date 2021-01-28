@@ -55,10 +55,14 @@ $(document).ready(function() {
     console.log($('#tweet-text').val().length);
     if($('#tweet-text').val().length === 0 || $('#tweet-text').val() === null) {
       $('a.error').html("! Tweet cannot be blank");
-      $('.error').css("display", "inline");
+      $("a.error").slideDown( "fast", function() {
+        // Animation complete.
+      });
     } else if ($('#tweet-text').val().length > 140) {
       $('a.error').html("! Tweet cannot exceed 140 characters");
-      $('.error').css("display", "inline");
+      $("a.error").slideDown( "fast", function() {
+        // Animation complete.
+      });
     } else {
       $.ajax({
         type: 'POST',
@@ -67,7 +71,9 @@ $(document).ready(function() {
       }).then(() => {
         loadTweets()
         $('#tweet-text').val('')
-        $('.error').css("display", "none");
+        $("a.error").slideUp( "fast", function() {
+          // Animation complete.
+        });
         $('a.error').html("");
         $(".counter").html(140);
       })

@@ -17,3 +17,7 @@ nav div {
   flex-flow: column;
   align-items: center;
 }
+#arrow {
+  color: red;
+  text-decoration:none;
+}

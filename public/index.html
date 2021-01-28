@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -26,11 +27,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/0.11.4/jquery.timeago.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      jQuery(document).ready(function() {
-        $("time.timeago").timeago();
-      });
-   </script>
+
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -38,12 +35,13 @@
   </head>
 
   <body>
+    <div id="spacer"></div>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
       <div>
         <a><strong>Write</strong> a new tweet</a>
-        <span>&#8681;</span>
+        <a href="#tweet-text" id="arrow" class="fas fa-angle-double-down"></a>
       </div>
     </nav>
     <header class="header">
@@ -59,9 +57,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet<a class="error"></a></h2>
+        <a class="error"></a>
+        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" id="tweet-form">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-footer">
             <button class="tweet" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
