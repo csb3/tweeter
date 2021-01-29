@@ -60,12 +60,10 @@ $(document).ready(function() {
     //displays errors if tweet is empty or exceeds 140 characters
     if ($('#tweet-text').val().length === 0 || $('#tweet-text').val() === null) {
       $('a.error').html("! Tweet cannot be blank");
-      $('a.error').slideDown("fast", function() {
-      });
+      $('a.error').slideDown("fast", function() {});
     } else if ($('#tweet-text').val().length > 140) {
       $('a.error').html("! Tweet cannot exceed 140 characters");
-      $('a.error').slideDown("fast", function() {
-      });
+      $('a.error').slideDown("fast", function() {});
     } else {
       //Sends tweet and reloads tweets section, removing error messages (if any)
       $.ajax({
