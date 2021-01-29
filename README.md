@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of Desktop View"]()
-!["Screenshot of Mobile View"]()
+!["Screenshot of Desktop View"](https://github.com/csb3/tweeter/blob/0906dc8ef17edb782b9b7cbc039855cce321ce71/docs/tweeter-desktop-view.png)
+!["Screenshot of Mobile View"](https://github.com/csb3/tweeter/blob/0906dc8ef17edb782b9b7cbc039855cce321ce71/docs/tweeter-mobile-view.png)
 
 ## Getting Started
 
