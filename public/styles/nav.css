@@ -5,27 +5,31 @@ nav {
   background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
   color: #FFFFFF;
   padding: 1.5em;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
 }
+
 nav span {
   font-family: 'Bungee', cursive, sans-serif;
 }
+
 nav div {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
+
 #arrow {
   color: red;
-  text-decoration:none;
+  text-decoration: none;
 }
+
 @media only screen and (min-width: 1024px) {
   nav {
-  background-color: #4056A1;
-  color: #FFFFFF;
-  background-image:none;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    background-image: none;
   }
 }

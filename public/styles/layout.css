@@ -3,10 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
   background-color: #4056A1;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -35,8 +37,9 @@ main {
 label {
   font-weight: bold;
 }
+
 #spacer {
-  height:120px;
+  height: 120px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -45,7 +48,6 @@ label {
     flex-flow: row wrap;
     align-items: flex-start;
   }
-
   #spacer {
     align-self: top;
     height: 160px;
@@ -54,5 +56,4 @@ label {
   .container {
     width: 50%;
   }
-
 }
